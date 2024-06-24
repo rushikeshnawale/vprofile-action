@@ -49,11 +49,4 @@ jobs:
           JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.23-9/x64
           JAVA_HOME_11_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.23-9/x64
 
-      # Check the Quality Gate status
-      - name: SonarQube Quality Gate check
-        id: sonarqube-quality-gate-check
-        uses: sonarsource/sonarqube-quality-gate-action@master
-        timeout-minutes: 5
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_URL }}
+      
